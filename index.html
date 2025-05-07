@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lê Khánh An - Sinh viên Điện tử Viễn thông tại Học viện Bưu chính Viễn thông">
+    <title>Lê Khánh An - Sinh viên Điện tử Viễn thông</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-primary-600 dark:text-primary-400">Lê Khánh An</h1>
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="#about" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Giới thiệu</a>
+                    <a href="#skills" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Kỹ năng</a>
+                    <a href="#projects" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Dự án</a>
+                    <a href="#education" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Học vấn</a>
+                    <a href="#contact" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Liên hệ</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <a href="#contact" class="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors">
+                        Liên hệ
+                    </a>
+                    <button class="md:hidden p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700" id="mobile-menu-button">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden container mx-auto px-4 py-4 border-t border-gray-200 dark:border-gray-800">
+                <nav class="flex flex-col space-y-4">
+                    <a href="#about" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Giới thiệu</a>
+                    <a href="#skills" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Kỹ năng</a>
+                    <a href="#projects" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Dự án</a>
+                    <a href="#education" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Học vấn</a>
+                    <a href="#contact" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Liên hệ</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-4 py-8">
+            <!-- Hero Section -->
+            <section class="flex flex-col md:flex-row items-center gap-8 mb-16 py-12">
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-primary-500 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" 
+                             alt="Lê Khánh An" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-4xl font-bold mb-4">Xin chào, tôi là <span class="text-primary-600 dark:text-primary-400">Lê Khánh An</span></h2>
+                    <p class="text-xl mb-6">Sinh viên ngành Điện tử Viễn thông tại Học viện Bưu chính Viễn thông</p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 rounded-full">Điện tử</span>
+                        <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 rounded-full">Viễn thông</span>
+                        <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 rounded-full">Lập trình</span>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#about" class="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors">
+                            Giới thiệu về tôi
+                        </a>
+                        <a href="#projects" class="px-6 py-3 border border-primary-600 text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-gray-800 rounded-lg transition-colors">
+                            Dự án của tôi
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="mb-16 scroll-mt-20">
+                <h2 class="text-3xl font-bold mb-8 text-center">Giới thiệu</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-semibold mb-4 text-primary-600 dark:text-primary-400">Về tôi</h3>
+                        <p class="mb-4">Tôi là Lê Khánh An, hiện đang là sinh viên năm 3 ngành Điện tử Viễn thông tại Học viện Bưu chính Viễn thông.</p>
+                        <p class="mb-4">Với niềm đam mê công nghệ và điện tử, tôi luôn tìm tòi, học hỏi để nâng cao kiến thức và kỹ năng chuyên môn.</p>
+                        <p>Tôi mong muốn được ứng dụng những kiến thức đã học vào thực tế và phát triển bản thân trong lĩnh vực điện tử viễn thông.</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-semibold mb-4 text-primary-600 dark:text-primary-400">Mục tiêu</h3>
+                        <p class="mb-4">Ngắn hạn: Hoàn thành tốt chương trình học tại trường, tham gia các dự án thực tế để tích lũy kinh nghiệm.</p>
+                        <p class="mb-4">Trung hạn: Tốt nghiệp với kết quả xuất sắc và tìm kiếm cơ hội làm việc tại các công ty công nghệ hàng đầu.</p>
+                        <p>Dài hạn: Trở thành chuyên gia trong lĩnh vực điện tử viễn thông, đóng góp vào sự phát triển của ngành.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="mb-16 scroll-mt-20">
+                <h2 class="text-3xl font-bold mb-8 text-center">Kỹ năng</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Technical Skills -->
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-microchip text-2xl text-primary-600 dark:text-primary-400 mr-3"></i>
+                            <h3 class="text-xl font-semibold">Kỹ thuật</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex flex-col">
+                                <span class="mb-1">Thiết kế mạch điện tử</span>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-primary-600 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </li>
+                            <li class="flex flex-col">
+                                <span class="mb-1">Lập trình vi điều khiển</span>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-primary-600 h-2 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </li>
+                            <li class="flex flex-col">
+                                <span class="mb-1">Xử lý tín hiệu số</span>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-primary-600 h-2 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Programming Skills -->
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-code text-2xl text-primary-600 dark:text-primary-400 mr-3"></i>
+                            <h3 class="text-xl font-semibold">Lập trình</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex flex-col">
+                                <span class="mb-1">C/C++</span>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-primary-600 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li class="flex flex-col">
+                                <span class="mb-1">Python</span>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-primary-600 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </li>
+                            <li class="flex flex-col">
+                                <span class="mb-1">MATLAB</span>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-primary-600 h-2 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Soft Skills -->
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-users text-2xl text-primary-600 dark:text-primary-400 mr-3"></i>
+                            <h3 class="text-xl font-semibold">Kỹ năng mềm</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex flex-col">
+                                <span class="mb-1">Làm việc nhóm</span>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-primary-600 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li class="flex flex-col">
+                                <span class="mb-1">Giải quyết vấn đề</span>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-primary-600 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </li>
+                            <li class="flex flex-col">
+                                <span class="mb-1">Tiếng Anh</span>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-primary-600 h-2 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="mb-16 scroll-mt-20">
+                <h2 class="text-3xl font-bold mb-8 text-center">Dự án</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Project 1 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Hệ thống giám sát môi trường" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-primary-600 dark:text-primary-400">Hệ thống giám sát môi trường</h3>
+                            <p class="mb-4">Thiết kế và xây dựng hệ thống giám sát các thông số môi trường như nhiệt độ, độ ẩm, chất lượng không khí sử dụng Arduino và cảm biến.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 rounded">Arduino</span>
+                                <span class="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 rounded">IoT</span>
+                                <span class="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 rounded">C++</span>
+                            </div>
+                            <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">Xem chi tiết →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                             alt="Ứng dụng xử lý tín hiệu âm thanh" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-primary-600 dark:text-primary-400">Ứng dụng xử lý tín hiệu âm thanh</h3>
+                            <p class="mb-4">Phát triển ứng dụng xử lý tín hiệu âm thanh với các chức năng lọc nhiễu, phân tích phổ tần số và nhận dạng giọng nói.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 rounded">Python</span>
+                                <span class="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 rounded">DSP</span>
+                                <span class="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 rounded">NumPy</span>
+                            </div>
+                            <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">Xem chi tiết →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563396983906-b3795482a59a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" 
+                             alt="Mạng truyền thông không dây" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-primary-600 dark:text-primary-400">Mạng truyền thông không dây</h3>
+                            <p class="mb-4">Nghiên cứu và triển khai mạng truyền thông không dây sử dụng công nghệ LoRa cho các ứng dụng IoT với phạm vi rộng.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 rounded">LoRa</span>
+                                <span class="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 rounded">Wireless</span>
+                                <span class="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 rounded">Embedded</span>
+                            </div>
+                            <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">Xem chi tiết →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="mb-16 scroll-mt-20">
+                <h2 class="text-3xl font-bold mb-8 text-center">Học vấn</h2>
+                <div class="space-y-6">
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <h3 class="text-xl font-semibold text-primary-600 dark:text-primary-400">Học viện Bưu chính Viễn thông</h3>
+                            <span class="text-sm text-gray-600 dark:text-gray-400">2021 - Hiện tại</span>
+                        </div>
+                        <p class="mb-2"><strong>Chuyên ngành:</strong> Điện tử Viễn thông</p>
+                        <p class="mb-2"><strong>GPA:</strong> 3.8/4.0</p>
+                        <p><strong>Các môn học chính:</strong> Xử lý tín hiệu số, Kỹ thuật vi điều khiển, Truyền thông không dây, Mạng máy tính, Điện tử tương tự và số.</p>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <h3 class="text-xl font-semibold text-primary-600 dark:text-primary-400">THPT Chuyên Nguyễn Huệ</h3>
+                            <span class="text-sm text-gray-600 dark:text-gray-400">2018 - 2021</span>
+                        </div>
+                        <p class="mb-2"><strong>Chuyên ban:</strong> Toán - Tin học</p>
+                        <p><strong>Thành tích:</strong> Giải Nhì học sinh giỏi cấp tỉnh môn Tin học, Giải Ba Olympic Toán học.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="scroll-mt-20">
+                <h2 class="text-3xl font-bold mb-8 text-center">Liên hệ</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-semibold mb-6 text-primary-600 dark:text-primary-400">Gửi tin nhắn</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block mb-2">Họ và tên</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block mb-2">Tin nhắn</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors">Gửi tin nhắn</button>
+                        </form>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-semibold mb-6 text-primary-600 dark:text-primary-400">Thông tin liên hệ</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-primary-600 dark:text-primary-400 mt-1 mr-4 w-5"></i>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p>lekhanhan@example.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-phone text-primary-600 dark:text-primary-400 mt-1 mr-4 w-5"></i>
+                                <div>
+                                    <h4 class="font-semibold">Điện thoại</h4>
+                                    <p>+84 123 456 789</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-primary-600 dark:text-primary-400 mt-1 mr-4 w-5"></i>
+                                <div>
+                                    <h4 class="font-semibold">Địa chỉ</h4>
+                                    <p>Học viện Bưu chính Viễn thông, Hà Nội, Việt Nam</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-semibold my-6 text-primary-600 dark:text-primary-400">Mạng xã hội</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center hover:bg-primary-600 hover:text-white transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center hover:bg-primary-600 hover:text-white transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center hover:bg-primary-600 hover:text-white transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center hover:bg-primary-600 hover:text-white transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-
