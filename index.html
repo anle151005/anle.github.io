@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lê Khánh An - Sinh viên Điện tử Viễn thông tại Học viện Bưu chính Viễn thông">
+    <meta name="keywords" content="Lê Khánh An, Điện tử Viễn thông, PTIT, sinh viên">
+    <meta property="og:title" content="Lê Khánh An - Sinh viên Điện tử Viễn thông">
+    <meta property="og:description" content="Lê Khánh An - Sinh viên Điện tử Viễn thông tại Học viện Bưu chính Viễn thông">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3">
+    <meta property="og:url" content="https://yourdomain.com">
+    <link rel="icon" href="favicon.ico">
     <title>Lê Khánh An - Sinh viên Điện tử Viễn thông</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
@@ -38,6 +44,15 @@
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .scroll-animation.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
